@@ -23,34 +23,54 @@ Notable works include:
 
 These works serve as the knowledge base for this AI. However, for copyright reasons, the folder of works used for the knowledge base is not included in this repository.
 
-## Code Description
-The code for Jonathan A.I. Brown comprises the following components:
-1. **PDF Text Extraction**: Reads and extracts text from all PDF files in a specified folder.
-2. **Text Indexing**: Splits the extracted text into manageable chunks and creates a vector-based index using ChromaDB for efficient retrieval.
-3. **Context Retrieval**: Retrieves the most relevant chunks of text for a given query using similarity search.
-4. **AI Response Generation**: Sends the query and retrieved context to OpenAI's GPT-4 API, which generates a detailed response in the style of Jonathan A. C. Brown. 
+## Features
+- Text extraction from multiple file formats (PDF, DOCX, TXT)
+- Automatic chunking and indexing of extracted text
+- Semantic search using OpenAI embeddings
+- Context-aware responses using GPT-4
+- Error handling and retry mechanisms
+- Rate limiting protection
 
-## Installation Guide
+
+## Requirements
+- Python 3.8+
+- OpenAI API key
+- Required Python packages (see requirements.txt)
+
+## Installation
 1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/jonathan-ai-brown.git
-   cd jonathan-ai-brown
-   ```
-2. Install the required dependencies:
-   ```bash
-   pip install openai PyPDF2 langchain chromadb tiktoken
-   ```
-3. Obtain an OpenAI API key by signing up at [OpenAI](https://openai.com/). For budgetary reasons, users must provide their own API key.
-4. Replace `your_openai_api_key` in the code with your actual OpenAI API key.
 
-## Usage Guide
-1. Prepare a folder of PDF files containing Jonathan A. C. Brown's works.
-2. Update the `folder_path` variable in the code with the path to your folder.
-3. Run the notebook in Jupyter:
-   ```bash
-   jupyter notebook
-   ```
-4. Input a query in the specified section of the notebook to receive a response from "Jonathan A.I. Brown."
+bashCopygit clone https://github.com/yourusername/jonathan-ai-brown.git
+cd jonathan-ai-brown
+
+2. Install required packages:
+
+bashCopypip install -r requirements.txt
+
+3. Create a .env file in the project root and add your OpenAI API key:
+
+envCopyOPENAI_API_KEY=your-api-key-here
+
+## Usage
+1. Prepare your document folder:
+   - Create a folder containing the texts you want to use as context
+   - Supported formats: PDF, DOCX, TXT
+   - Place all documents in the same folder
+2. Initialize the emulator:
+
+pythonCopyfrom brown_emulator import BrownEmulator
+
+emulator = BrownEmulator(
+    api_key="your-api-key-here",
+    folder_path="path/to/your/documents"
+)
+emulator.create_index()
+
+3. Query the system:
+
+pythonCopy# Single query
+response = emulator.query("What is Brown's perspective on the evolution of Islamic legal theory?")
+print(response)
 
 ## References
 - Brown, J. A. C. (2007). The Canonization of al-Bukhārī and Muslim: The Formation and Function of the Sunnī Ḥadīth Canon. Leiden: Brill.
