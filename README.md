@@ -47,7 +47,7 @@ These works serve as the knowledge base for this AI. However, for copyright reas
    pip install -r requirements.txt
 
 3. Create a .env file in the project root and add your OpenAI API key:
-   ```envCopyOPENAI_API_KEY=your-api-key-here
+   ```OPENAI_API_KEY=your-api-key-here
 
 ## Usage
 1. Prepare your document folder:
