@@ -83,7 +83,7 @@ These works serve as the knowledge base for this AI. However, for copyright reas
 - Ibid. (2022). Islam and Blackness. London: Oneworld Publications.
 
 ## Additional Notes
-- Users are responsible for providing their own knowledge base of texts. For ethical and privacy considerations, the folder of Jonathan A. C. Brown's works is not included in this repository.
+- Users are responsible for obtaining permission and providing their own knowledge base of texts. For ethical and privacy considerations, the folder of Jonathan A. C. Brown's works is not included in this repository.
 - Users also need to use their own APIs for budgetary reasons.
 
 By following these steps, you can adapt the code for your own purposes or scholarly projects. 
