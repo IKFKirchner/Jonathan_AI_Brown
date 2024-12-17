@@ -39,17 +39,15 @@ These works serve as the knowledge base for this AI. However, for copyright reas
 
 ## Installation
 1. Clone this repository:
-
-bashCopygit clone https://github.com/yourusername/jonathan-ai-brown.git
-cd jonathan-ai-brown
-
+   ```bash
+   git clone https://github.com/yourusername/jonathan-ai-brown.git
+   cd jonathan-ai-brown
 2. Install required packages:
-
-bashCopypip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
 3. Create a .env file in the project root and add your OpenAI API key:
-
-envCopyOPENAI_API_KEY=your-api-key-here
+   ```envCopyOPENAI_API_KEY=your-api-key-here
 
 ## Usage
 1. Prepare your document folder:
@@ -57,20 +55,16 @@ envCopyOPENAI_API_KEY=your-api-key-here
    - Supported formats: PDF, DOCX, TXT
    - Place all documents in the same folder
 2. Initialize the emulator:
-
-pythonCopyfrom brown_emulator import BrownEmulator
-
-emulator = BrownEmulator(
-    api_key="your-api-key-here",
-    folder_path="path/to/your/documents"
-)
-emulator.create_index()
+   ```from brown_emulator import BrownEmulator
+   emulator = BrownEmulator(
+       api_key="your-api-key-here",
+       folder_path="path/to/your/documents"
+   )
+   emulator.create_index()
 
 3. Query the system:
-
-pythonCopy# Single query
-response = emulator.query("What is Brown's perspective on the evolution of Islamic legal theory?")
-print(response)
+   ```response = emulator.query("What is Brown's perspective on the prevalence of matn criticism in the Sunni Hadith tradition prior to the canonization of Bukhari and Muslim?")
+   print(response)
 
 ## References
 - Brown, J. A. C. (2007). The Canonization of al-Bukhārī and Muslim: The Formation and Function of the Sunnī Ḥadīth Canon. Leiden: Brill.
